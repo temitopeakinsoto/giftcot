@@ -9,7 +9,7 @@ import StepOne from "./stepOne";
 import StepTwo from "./stepTwo";
 import StepThree from "./stepThree";
 import StepFour from "./stepFour";
-import Landing from "./Landing";
+// import Landing from "./Landing";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const initialformState = {
@@ -75,7 +75,7 @@ const App = () => {
     <Router>
       <div className="container">
         <Switch>
-          <Route path="/" component={Landing} />
+          {/* <Route path="/" component={Landing} /> */}
           <MultiStep
             steps={steps}
             prevStyle={prevStyle}
