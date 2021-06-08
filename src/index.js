@@ -75,12 +75,14 @@ const App = () => {
     <Router>
       <div className="container">
         <Switch>
-          <Route path="/" component={Landing} />
-          <MultiStep
-            steps={steps}
-            prevStyle={prevStyle}
-            nextStyle={nextStyle}
-          />
+          <Route exact path="/" component={Landing} />
+          <Route path="/home">
+            <MultiStep
+              steps={steps}
+              prevStyle={prevStyle}
+              nextStyle={nextStyle}
+            />
+          </Route>
         </Switch>
       </div>
     </Router>
