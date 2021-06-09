@@ -14,7 +14,7 @@ export default function Thanks() {
         padding: "2rem 1rem 1rem 1rem",
       }}
     >
-      <p>Your response has been successfully submitted. Thank You!</p>
+      <p>Thank you for testing our service, we will notify you when we launch!</p>
       <Link to="/">
         <button>Home</button>
       </Link>
