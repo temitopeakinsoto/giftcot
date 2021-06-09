@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 
 const StepFour = (props) => {
   const { submit, handleInputChange } = props;
-  console.log("level four is", submit);
-  const [checked, setChecked] = useState(false);
+  // const [checked, setChecked] = useState(false);
   const [no, setNo] = useState(false);
 
   return (
@@ -13,15 +12,16 @@ const StepFour = (props) => {
         I would love to pay for a service that reminds and recommend occassions
         and gifts to me for an entire year
       </p>
-      <div style={{ display: "flex", marginBottom: "1rem" }}>
+      <form style={{ display: "flex", marginBottom: "1rem" }}>
         <span style={{ marginRight: "1rem" }}>
           Yes <span style={{ color: "red" }}>($10 / Yr)</span>
           <input
             type="radio"
-            onChange={(e) => setChecked(e.target.value)}
-            name="pay10"
+            // onChange={(e) => setChecked(e.target.value)}
+            name="willing_to_pay"
+            value="10 dollars"
             onChange={handleInputChange}
-            // onChange={(e) => setNo(false)}
+            onChange={(e) => setNo(false)}
             style={{ marginLeft: "1rem" }}
           />
         </span>
@@ -29,9 +29,10 @@ const StepFour = (props) => {
           Yes <span style={{ color: "red" }}>($6 / Yr)</span>
           <input
             type="radio"
-            name="pay6"
+            name="willing_to_pay"
+            value="6 dollars"
             onChange={handleInputChange}
-            // onChange={(e) => setNo(false)}
+            onChange={(e) => setNo(false)}
             style={{ marginLeft: "1rem" }}
           />
         </span>
@@ -40,8 +41,11 @@ const StepFour = (props) => {
           <input
             type="radio"
             // onChange={(e) => {setChecked(e.target.value)}}
-            name="nopay"
-            onChange={() => setNo(true)}
+            name="willing_to_pay"
+            value="no"
+            onChange={handleInputChange}
+            onChange={(e) => setNo(true)}
+
             style={{ marginLeft: "1rem" }}
           />
         </span>
@@ -53,10 +57,11 @@ const StepFour = (props) => {
               name="set"
               onChange={handleInputChange}
               style={{ marginLeft: "1rem" }}
+              placeholder="Please tell us why"
             />
           )}
         </p>
-      </div>
+      </form>
       <Link to="/">
         <button
           style={{ position: "absolute", left: "0", bottom: "-50px" }}

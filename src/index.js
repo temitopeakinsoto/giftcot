@@ -31,7 +31,8 @@ const initialformState = {
   date_entered: '',
   pay10: '',
   pay6: '',
-  nopay: ''
+  nopay: '',
+  willing_to_pay: ''
 };
 
 const prevStyle = { background: "#33c3f0", "border-width": "2px" };
