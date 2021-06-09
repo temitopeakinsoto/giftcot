@@ -1,14 +1,15 @@
 import React, { useState } from "react";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 import { Link } from "react-router-dom";
 
 const StepFour = (props) => {
-  const { submit, formState, handleInputChange, handleInputChange2 } = props;
-  // const [checked, setChecked] = useState(false);
+  const { submit, handleInputChange2 } = props;
   const [no, setNo] = useState(false);
 
   return (
     <div className="row">
-      <p style={{color: 'darkred', fontSize: '18px'}}>
+      <p style={{ color: "darkred", fontSize: "18px" }}>
         I would love to pay for a service that reminds and recommend occassions
         and gifts to me for an entire year
       </p>
@@ -19,8 +20,8 @@ const StepFour = (props) => {
             type="radio"
             name="willing_to_pay"
             value="10 dollars"
-            onChange={() => handleInputChange2('10 dollars')}
             onChange={(e) => setNo(false)}
+            onChange={() => handleInputChange2("10 dollars")}
             style={{ marginLeft: "1rem" }}
           />
         </span>
@@ -30,27 +31,26 @@ const StepFour = (props) => {
             type="radio"
             name="willing_to_pay"
             value="6 dollars"
-            onChange={() => handleInputChange2('6 dollars')}
             onChange={(e) => setNo(false)}
+            onChange={() => handleInputChange2("6 dollars")}
             style={{ marginLeft: "1rem" }}
           />
         </span>
         <span style={{ marginRight: "1rem" }}>
           No
           <input
-            type="radio"            
+            type="radio"
             name="willing_to_pay"
             value="no"
-            onChange={() => handleInputChange2('no')}
+            onChange={() => handleInputChange2("no")}
             onChange={(e) => setNo(true)}
-
             style={{ marginLeft: "1rem" }}
           />
         </span>
         <p>
           {no && (
             <input
-              type="text"             
+              type="text"
               name="set"
               // onChange={handleInputChange}
               style={{ marginLeft: "1rem" }}
@@ -60,15 +60,25 @@ const StepFour = (props) => {
         </p>
       </form>
       <Link to="/">
-        <button
-          style={{ position: "absolute", left: "0", bottom: "-50px" }}
-          onClick={submit}
-        >
-          Submit
-        </button>
+        
+          
+              <button
+                style={{ position: "absolute", left: "0", bottom: "-50px" }}
+                onClick={submit}
+              >
+                Submit
+              </button>
+        
+           
+        
       </Link>
     </div>
   );
 };
 
+// const PopupExample = () => (
+//   <Popup trigger={<button> Trigger</button>} position="right center">
+//     <div>Popup content here !!</div>
+//   </Popup>
+// );
 export default StepFour;

@@ -53,7 +53,7 @@ const App = (props) => {
   };
 
   const handleInputChange2 = (val) => {
-    alert('getting here')
+    // alert('getting here')
     setFormState({
       ...formState,
       willing_to_pay: val
@@ -61,9 +61,8 @@ const App = (props) => {
   };
 
   const submit = (e) => {
-    console.log('Form state is ', formState)
+    // console.log('Form state is ', formState)
     ref.push(formState);
-    console.log('props is', props)
     
   };
   const steps = [
