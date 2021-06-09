@@ -4,7 +4,7 @@ const StepThree = (props) => {
   return (
     <>
       <p style={{fontSize: '16px', fontWeight: 'bold', color: 'mediumpurple', fontFamily: 'Verdana'}}>
-        Here's a list of gifts suggestion based on your budget and preferences
+        Here's a list of gifts suggestion for you.
       </p>
       <div
         style={{
