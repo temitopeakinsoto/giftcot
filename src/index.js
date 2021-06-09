@@ -41,7 +41,7 @@ let database = firebase.database();
 let ref = database.ref("schedules");
 
 
-const App = () => {
+const App = (props) => {
   const [formState, setFormState] = useState(initialformState);
 
   const handleInputChange = (e) => {
@@ -54,7 +54,8 @@ const App = () => {
   const submit = (e) => {
     console.log('Form state is ', formState)
     ref.push(formState);
-    alert("got here")
+    console.log('props is', props)
+    
   };
   const steps = [
     {

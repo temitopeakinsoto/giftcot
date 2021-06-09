@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const StepFour = (props) => {
   const { submit, handleInputChange } = props;
   console.log("level four is", submit);
   const [checked, setChecked] = useState(false);
-  const [no, setNo] = useState(false)
+  const [no, setNo] = useState(false);
 
   return (
     <div className="row">
@@ -28,7 +29,6 @@ const StepFour = (props) => {
           Yes <span style={{ color: "red" }}>($6 / Yr)</span>
           <input
             type="radio"
-            
             name="pay6"
             onChange={handleInputChange}
             // onChange={(e) => setNo(false)}
@@ -45,23 +45,26 @@ const StepFour = (props) => {
             style={{ marginLeft: "1rem" }}
           />
         </span>
-        <p>{
-          no && <input
-          type="text"
-          // onChange={(e) => setChecked(e.target.value)}
-          name="set"
-          onChange={handleInputChange}
-          style={{ marginLeft: "1rem" }}
-        />
-        }</p>
-        
+        <p>
+          {no && (
+            <input
+              type="text"
+              // onChange={(e) => setChecked(e.target.value)}
+              name="set"
+              onChange={handleInputChange}
+              style={{ marginLeft: "1rem" }}
+            />
+          )}
+        </p>
       </div>
-      <button
-        style={{ position: "absolute", left: "0", bottom: "-50px" }}
-        onClick={submit}
-      >
-        Submit
-      </button>
+      <Link to="/">
+        <button
+          style={{ position: "absolute", left: "0", bottom: "-50px" }}
+          onClick={submit}
+        >
+          Submit
+        </button>
+      </Link>
     </div>
   );
 };
