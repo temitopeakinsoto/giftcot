@@ -48,7 +48,15 @@ const App = (props) => {
   const handleInputChange = (e) => {
     setFormState({
       ...formState,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleInputChange2 = (val) => {
+    alert('getting here')
+    setFormState({
+      ...formState,
+      willing_to_pay: val
     });
   };
 
@@ -76,7 +84,7 @@ const App = (props) => {
     { component: <StepThree /> },
     {
       component: (
-        <StepFour handleInputChange={handleInputChange} submit={submit} />
+        <StepFour formState={formState} handleInputChange={handleInputChange} handleInputChange2={handleInputChange2} submit={submit} />
       ),
     },
   ];

@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const StepFour = (props) => {
-  const { submit, handleInputChange } = props;
+  const { submit, formState, handleInputChange, handleInputChange2 } = props;
   // const [checked, setChecked] = useState(false);
   const [no, setNo] = useState(false);
 
   return (
     <div className="row">
-      <p>
+      <p style={{color: 'darkred', fontSize: '18px'}}>
         I would love to pay for a service that reminds and recommend occassions
         and gifts to me for an entire year
       </p>
@@ -17,10 +17,9 @@ const StepFour = (props) => {
           Yes <span style={{ color: "red" }}>($10 / Yr)</span>
           <input
             type="radio"
-            // onChange={(e) => setChecked(e.target.value)}
             name="willing_to_pay"
             value="10 dollars"
-            onChange={handleInputChange}
+            onChange={() => handleInputChange2('10 dollars')}
             onChange={(e) => setNo(false)}
             style={{ marginLeft: "1rem" }}
           />
@@ -31,7 +30,7 @@ const StepFour = (props) => {
             type="radio"
             name="willing_to_pay"
             value="6 dollars"
-            onChange={handleInputChange}
+            onChange={() => handleInputChange2('6 dollars')}
             onChange={(e) => setNo(false)}
             style={{ marginLeft: "1rem" }}
           />
@@ -39,11 +38,10 @@ const StepFour = (props) => {
         <span style={{ marginRight: "1rem" }}>
           No
           <input
-            type="radio"
-            // onChange={(e) => {setChecked(e.target.value)}}
+            type="radio"            
             name="willing_to_pay"
             value="no"
-            onChange={handleInputChange}
+            onChange={() => handleInputChange2('no')}
             onChange={(e) => setNo(true)}
 
             style={{ marginLeft: "1rem" }}
@@ -52,10 +50,9 @@ const StepFour = (props) => {
         <p>
           {no && (
             <input
-              type="text"
-              // onChange={(e) => setChecked(e.target.value)}
+              type="text"             
               name="set"
-              onChange={handleInputChange}
+              // onChange={handleInputChange}
               style={{ marginLeft: "1rem" }}
               placeholder="Please tell us why"
             />
