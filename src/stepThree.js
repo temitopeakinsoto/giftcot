@@ -3,7 +3,7 @@ import React from "react";
 const StepThree = (props) => {
   return (
     <>
-      <p style={{color: 'darkred', fontSize: '18px'}}>
+      <p style={{fontSize: '16px', fontWeight: 'bold', color: 'mediumpurple', fontFamily: 'Verdana'}}>
         Here's a list of gifts suggestion based on your budget and preferences
       </p>
       <div

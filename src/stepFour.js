@@ -9,7 +9,7 @@ const StepFour = (props) => {
 
   return (
     <div className="row">
-      <p style={{ color: "darkred", fontSize: "18px" }}>
+      <p style={{fontSize: '16px', fontWeight: 'bold', color: 'mediumpurple', fontFamily: 'Verdana'}}>
         I would love to pay for a service that reminds and recommend occassions
         and gifts to me for an entire year
       </p>
@@ -60,17 +60,12 @@ const StepFour = (props) => {
         </p>
       </form>
       <Link to="/">
-        
-          
-              <button
-                style={{ position: "absolute", left: "0", bottom: "-50px" }}
-                onClick={submit}
-              >
-                Submit
-              </button>
-        
-           
-        
+        <button
+          style={{ position: "absolute", left: "0", bottom: "-50px" }}
+          onClick={submit}
+        >
+          Submit
+        </button>
       </Link>
     </div>
   );

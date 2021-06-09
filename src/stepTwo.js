@@ -10,7 +10,7 @@ const StepTwo = (props) => {
   const [value, onChange] = useState(new Date())
   return (
     <div style={{marginBottom: '2rem'}}>
-      <p style={{color: 'darkred', fontSize: '18px'}}>Select the date for the occassion you would like to schedule</p>
+      <p style={{fontSize: '16px', fontWeight: 'bold', color: 'mediumpurple', fontFamily: 'Verdana'}}>Select the date of the occassion you would like to schedule for</p>
       <Calendar
         value={value}
         onChange={onChange}

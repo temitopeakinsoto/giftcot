@@ -11,7 +11,7 @@ class Hero extends Component {
 	}
 
 	render() {
-		const { title, content, illustration: Illustration } = this.props;
+		const { title, content, content2, content3, illustration: Illustration } = this.props;
 
 		return (
 			<section className="hero">
@@ -19,10 +19,12 @@ class Hero extends Component {
 					<div className="hero-inner">
 						<div className="hero-copy">
 							<div className="container-sm">
-								<h1 className="hero-title h2-mobile mt-0 is-revealing">
+								<h1 style={{color: 'mediumblue', fontWeight:'bold'}} className="hero-title h2-mobile mt-0 is-revealing">
 									{title}
 								</h1>
-								<p className="hero-paragraph is-revealing">{content}</p>
+								<p style={{fontSize: '16px', fontWeight: 'bold', color: 'mediumpurple', fontFamily: 'Verdana'}} className="hero-paragraph is-revealing">{content}</p>
+								<p style={{fontSize: '16px', fontWeight: 'bold', color: 'mediumpurple', fontFamily: 'Verdana'}} className="hero-paragraph is-revealing">{content2}</p>
+								<p style={{fontSize: '16px', fontWeight: 'bold', color: 'mediumpurple', fontFamily: 'Verdana'}} className="hero-paragraph is-revealing">{content3}</p>
 							</div>
 
 							<NewsletterForm className="hero-form" />

@@ -61,9 +61,7 @@ const App = (props) => {
   };
 
   const submit = (e) => {
-    // console.log('Form state is ', formState)
-    ref.push(formState);
-    
+    ref.push(formState);    
   };
   const steps = [
     {

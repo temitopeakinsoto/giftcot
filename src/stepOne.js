@@ -6,7 +6,7 @@ const StepOne = (props) => {
 
   return (
     <div>
-      <p style={{color: 'darkred', fontSize: '18px'}}>Tell us some more about who you would like to schedule this occassion for</p>
+      <p style={{fontSize: '16px', fontWeight: 'bold', color: 'mediumpurple', fontFamily: 'Verdana'}}>Tell us some more about who you would like to schedule this occassion for</p>
       <div className="row">
         <div className="six columns">
           <label>Recipient's Name</label>

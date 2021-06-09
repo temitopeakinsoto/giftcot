@@ -8,7 +8,9 @@ export default function Landing() {
     <Layout>
       <Hero
         title="Giftcot"
-        content="Our landing page template works for all the devices, so you only have to setup it once, and get beautiful results forever."
+        content="Do you find yourself forgetting birthdays, anniversaries & occasions, and also sometimes what to buy for these occasions?"
+        content2 ="We can help because we have a lot of ideas about how to make your occasion memorable. So here we are asking for your support."
+        content3= "We'd like to request 3 minutes of your time to tell us if our product helps you to solve these problem & if you really like it would you then like to pay for it."
         illustration={HeroIllustration}
       />
     </Layout>
