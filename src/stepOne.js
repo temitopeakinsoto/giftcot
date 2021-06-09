@@ -91,7 +91,7 @@ const StepOne = (props) => {
                 Flowers <input value="yes" name="flowers" onChange={handleInputChange} type="checkbox" />
               </span>
               <span>
-                Choloclate <input value="yes" name="chocolate" onChange={handleInputChange} type="checkbox" />
+                Chocolate <input value="yes" name="chocolate" onChange={handleInputChange} type="checkbox" />
               </span>
             </div>
             <p>
