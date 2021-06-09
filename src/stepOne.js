@@ -67,49 +67,34 @@ const StepOne = (props) => {
           />
         </div>
       </div>
-      <div className="row">
-        {/* <div>
-          {formState.preferences &&
-            formState.preferences.map((item) => (
-              <span
-                style={{
-                  padding: "3px",
-                  marginLeft: "3px",
-                  color: "gray",
-                  fontWeight: "bold",
-                }}
-              >
-                {item} x
-              </span>
-            ))}
-        </div> */}
+      <div className="row">        
         <div className="six columns">
           <label>Preference(s)</label>
           <div>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <span>
-                Gift cards & Coupons <input type="checkbox" />
+                Gift Cards & Coupons <input value="yes" name="giftcards" onChange={handleInputChange} type="checkbox" />
               </span>
               <span>
-                Electronics <input type="checkbox" />
+                Electronics <input value="yes" name="electronics" onChange={handleInputChange} type="checkbox" />
               </span>
               <span>
-                Jewellery <input type="checkbox" />
+                Jewellery <input value="yes" name="jewellery" onChange={handleInputChange} type="checkbox" />
               </span>
             </div>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <span>
-                Personalized gifts <input type="checkbox" />
+                Personalized gifts <input value="yes" name="personalized" onChange={handleInputChange} type="checkbox" />
               </span>
               <span>
-                Flowers <input type="checkbox" />
+                Flowers <input value="yes" name="flowers" onChange={handleInputChange} type="checkbox" />
               </span>
               <span>
-                Choloclate <input type="checkbox" />
+                Choloclate <input value="yes" name="chocolate" onChange={handleInputChange} type="checkbox" />
               </span>
             </div>
             <p>
-              I don't know <input type="checkbox" />
+              I don't know <input value="true" name="unknown" onChange={handleInputChange} type="checkbox" />
             </p>
           </div>
         </div>

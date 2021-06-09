@@ -12,12 +12,9 @@ const StepTwo = (props) => {
     <div style={{marginBottom: '2rem'}}>
       <Calendar
         value={value}
-        // onChange={onChange}
-        onChange={(prev) => setFormState({
-          ...prev,
-          'date': value
-        })}
-        name='date'
+        onChange={onChange}
+        // onChange={handleInputChange}
+        name='date_entered'
       />
     </div>
   );

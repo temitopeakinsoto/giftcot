@@ -18,22 +18,28 @@ const initialformState = {
   email: "",
   budget: "",
   occassion: "",
-  preferences: ["ball", "wrist watch", "Lunch"],
+  preferences: [],
+  personalized: "",
+  giftcards: "",
+  electronics: "",
+  jewellery: "",
+  chocolate: "",
+  unknown: "false",
   set: "",
   schedule: "",
   select: "",
-  date: new Date(),
+  date_entered: '',
+  pay10: '',
+  pay6: '',
+  nopay: ''
 };
 
 const prevStyle = { background: "#33c3f0", "border-width": "2px" };
 const nextStyle = { background: "#33c3f0", "border-width": "2px" };
 
 let database = firebase.database();
-let ref = database.ref("scores");
-// const data = {
-//   name: 'Temi',
-//   score: 43
-// };
+let ref = database.ref("schedules");
+
 
 const App = () => {
   const [formState, setFormState] = useState(initialformState);
@@ -46,9 +52,10 @@ const App = () => {
   };
 
   const submit = (e) => {
+    console.log('Form state is ', formState)
     ref.push(formState);
+    alert("got here")
   };
-  console.log("form state values are  ", formState);
   const steps = [
     {
       component: (

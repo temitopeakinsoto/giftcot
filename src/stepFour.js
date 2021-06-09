@@ -18,9 +18,9 @@ const StepFour = (props) => {
           <input
             type="radio"
             onChange={(e) => setChecked(e.target.value)}
-            name="set"
+            name="pay10"
             onChange={handleInputChange}
-            onChange={(e) => setNo(false)}
+            // onChange={(e) => setNo(false)}
             style={{ marginLeft: "1rem" }}
           />
         </span>
@@ -29,9 +29,9 @@ const StepFour = (props) => {
           <input
             type="radio"
             
-            name="set"
+            name="pay6"
             onChange={handleInputChange}
-            onChange={(e) => setNo(false)}
+            // onChange={(e) => setNo(false)}
             style={{ marginLeft: "1rem" }}
           />
         </span>
@@ -40,7 +40,7 @@ const StepFour = (props) => {
           <input
             type="radio"
             // onChange={(e) => {setChecked(e.target.value)}}
-            name="set"
+            name="nopay"
             onChange={() => setNo(true)}
             style={{ marginLeft: "1rem" }}
           />
