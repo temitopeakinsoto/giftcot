@@ -10,6 +10,7 @@ import StepTwo from "./stepTwo";
 import StepThree from "./stepThree";
 import StepFour from "./stepFour";
 import Landing from "./Landing";
+import Thanks from "./Thanks"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const initialformState = {
@@ -28,11 +29,12 @@ const initialformState = {
   set: "",
   schedule: "",
   select: "",
-  date_entered: '',
-  pay10: '',
-  pay6: '',
-  nopay: '',
-  willing_to_pay: ''
+  date_entered: "",
+  pay10: "",
+  pay6: "",
+  nopay: "",
+  willing_to_pay: "",
+  thanks: false
 };
 
 const prevStyle = { background: "#33c3f0", "border-width": "2px" };
@@ -41,14 +43,13 @@ const nextStyle = { background: "#33c3f0", "border-width": "2px" };
 let database = firebase.database();
 let ref = database.ref("schedules");
 
-
 const App = (props) => {
   const [formState, setFormState] = useState(initialformState);
 
   const handleInputChange = (e) => {
     setFormState({
       ...formState,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -56,12 +57,12 @@ const App = (props) => {
     // alert('getting here')
     setFormState({
       ...formState,
-      willing_to_pay: val
+      willing_to_pay: val,
     });
   };
 
-  const submit = (e) => {
-    ref.push(formState);    
+  const submit = () => {
+    ref.push(formState);   
   };
   const steps = [
     {
@@ -81,7 +82,12 @@ const App = (props) => {
     { component: <StepThree /> },
     {
       component: (
-        <StepFour formState={formState} handleInputChange={handleInputChange} handleInputChange2={handleInputChange2} submit={submit} />
+        <StepFour
+          formState={formState}
+          handleInputChange={handleInputChange}
+          handleInputChange2={handleInputChange2}
+          submit={submit}
+        />
       ),
     },
   ];
@@ -90,6 +96,7 @@ const App = (props) => {
       <div className="container">
         <Switch>
           <Route exact path="/" component={Landing} />
+          <Route path="/thanks" component={Thanks} />
           <Route path="/home">
             <MultiStep
               steps={steps}

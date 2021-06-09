@@ -3,6 +3,7 @@ import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import { Link } from "react-router-dom";
 
+
 const StepFour = (props) => {
   const { submit, handleInputChange2 } = props;
   const [no, setNo] = useState(false);
@@ -59,7 +60,7 @@ const StepFour = (props) => {
           )}
         </p>
       </form>
-      <Link to="/">
+      <Link to="/thanks">
         <button
           style={{ position: "absolute", left: "0", bottom: "-50px" }}
           onClick={submit}
@@ -71,9 +72,4 @@ const StepFour = (props) => {
   );
 };
 
-// const PopupExample = () => (
-//   <Popup trigger={<button> Trigger</button>} position="right center">
-//     <div>Popup content here !!</div>
-//   </Popup>
-// );
 export default StepFour;
