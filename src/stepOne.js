@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom'
 
 const StepOne = (props) => {
   const { handleInputChange, formState } = props;
@@ -97,6 +98,7 @@ const StepOne = (props) => {
               I don't know <input value="true" name="unknown" onChange={handleInputChange} type="checkbox" />
             </p>
           </div>
+          <Link to='/'><button>Home</button></Link>
         </div>
       </div>
     </div>
