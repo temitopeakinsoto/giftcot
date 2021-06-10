@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 
 const StepFour = (props) => {
-  const { submit, handleInputChange2 } = props;
+  const { submit, handleInputChange2, handleInputChange, formState } = props;
   const [no, setNo] = useState(false);
 
   return (
@@ -21,8 +21,10 @@ const StepFour = (props) => {
             type="radio"
             name="willing_to_pay"
             value="10 dollars"
-            onChange={(e) => setNo(false)}
-            onChange={() => handleInputChange2("10 dollars")}
+            onChange={(e) => {
+              setNo(false);
+              handleInputChange2("10 dollars")
+            }}
             style={{ marginLeft: "1rem" }}
           />
         </span>
@@ -32,8 +34,10 @@ const StepFour = (props) => {
             type="radio"
             name="willing_to_pay"
             value="6 dollars"
-            onChange={(e) => setNo(false)}
-            onChange={() => handleInputChange2("6 dollars")}
+            onChange={(e) => {
+              setNo(false);
+              handleInputChange2("6 dollars")
+            }}
             style={{ marginLeft: "1rem" }}
           />
         </span>
@@ -43,22 +47,25 @@ const StepFour = (props) => {
             type="radio"
             name="willing_to_pay"
             value="no"
-            onChange={() => handleInputChange2("no")}
-            onChange={(e) => setNo(true)}
+            onChange={(e) => {
+              setNo(true);
+              handleInputChange2("no")
+            }}
             style={{ marginLeft: "1rem" }}
           />
         </span>
-        {/* <p>
+        <p>
           {no && (
             <input
               type="text"
-              name="set"
-              // onChange={handleInputChange}
+              name="reason_for_rejection"
+              value={formState.reason_for_rejection}
+              onChange={handleInputChange}
               style={{ marginLeft: "1rem" }}
               placeholder="Please tell us why"
             />
           )}
-        </p> */}
+        </p>
       </form>
       <Link to="/thanks">
         <button

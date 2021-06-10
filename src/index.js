@@ -33,6 +33,7 @@ const initialformState = {
   pay10: "",
   pay6: "",
   nopay: "",
+  reason_for_rejection: '',
   willing_to_pay: "",
   thanks: false
 };
