@@ -48,7 +48,7 @@ const StepFour = (props) => {
             style={{ marginLeft: "1rem" }}
           />
         </span>
-        <p>
+        {/* <p>
           {no && (
             <input
               type="text"
@@ -58,7 +58,7 @@ const StepFour = (props) => {
               placeholder="Please tell us why"
             />
           )}
-        </p>
+        </p> */}
       </form>
       <Link to="/thanks">
         <button
